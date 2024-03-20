@@ -33,6 +33,7 @@ export class TmdbService {
     
     // Iterate over pages from the API
     //
+    console.log('Start fetching movies...')
     for(let i=1; i <= 3; i++){         
             await lastValueFrom(this.httpService.get(`https://api.themoviedb.org/3/discover/movie?page=${i}&sort_by=popularity.desc`, this.options).pipe(
             tap (({data}) => data.results.forEach(({id, original_title, original_language, popularity, release_date, genre_ids,vote_average}) => 
@@ -44,19 +45,26 @@ export class TmdbService {
         ))).catch(error => new Error(error))
         
     }
-    
+    console.log('End fetching movies.')
+    console.log('Start populating movies...')
     this.databaseService.populateMovies(movies)
+    console.log('End fetching movies.')
+    console.log('Start populating join table movies_genres...')
     this.databaseService.populateMoviesGenres(moviesGenres)
+    console.log('End populating join table movies_genres.')
+
 
 
     }
 
     // Function populates genres table from tmdb api
     async initGenres(): Promise<void> {
+        console.log('Start fetching genres...')
         const genres = await lastValueFrom(this.httpService.get('https://api.themoviedb.org/3/genre/movie/list', this.options)
         .pipe(map(({data}) => data.genres.map(({id, name})=> `${id}\t${name}\n`))))
-
+        console.log('End fetching genres.')
+        console.log('Start populating genres...')
         this.databaseService.populateGenres(genres)
-
+        console.log('End populating genres.')
     }
 }

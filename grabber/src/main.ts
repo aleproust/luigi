@@ -9,7 +9,8 @@ async function bootstrap() {
   // 1.Back end task: 1,2 
   await tmdbService.initGenres()
   await tmdbService.initMovies()
-  
+  await app.close();
+
 
 }
 bootstrap();
