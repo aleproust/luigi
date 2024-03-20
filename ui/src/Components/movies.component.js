@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
-
+import React from 'react'
+import './movies.component.scss'
 const Movies = ({movies}) => (
       
-        <table>
+        <table class='movies'>
           <th>Title</th>
           <th>Release Date</th>
           <th>Language</th>

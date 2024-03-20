@@ -10,7 +10,7 @@ export class MoviesController {
   getMovies(
     @Query('releaseMonth') releaseMonth: boolean = false, 
     @Query('genreId') genreId, 
-    @Query('sortBy') sortBy = 'releaseDate', 
+    @Query('sortBy') sortBy = 'release_date', 
     @Query('order')order = 'DESC',
     @Query('bookmarked') isBookmarked: boolean = false): Promise<ReadonlyArray<Movie>> {
     if(genreId){

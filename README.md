@@ -34,6 +34,3 @@ There is 3 projects in this repository:
 - 1. Back end task 4, GET http://localhost:3003/movies?sortBy=&orderBy=
 - 1. Back end task 5, POST http://localhost:3003/users
 
-
-## What could be improved
-- Style 

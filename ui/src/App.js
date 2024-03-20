@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
 import Movies from './Components/movies.component';
 import { fetchMoviesByGenre, fetchMoviesFromLastMonth } from './Services/movies.service';
 import { Component } from 'react';
@@ -22,8 +22,9 @@ export default class App extends Component {
   render(){
     return (
       <div className="App">
-        <button onClick={this.onFilterReleaseDateClick} > Display last month release</button>
-        <select onChange={ e=> this.onGenreSelected(e.target.value)}>
+        <button className='button' onClick={this.onFilterReleaseDateClick} > Display last month release</button>
+        Or select a genre: 
+        <select  onChange={ e=> this.onGenreSelected(e.target.value)}>
           <option></option>
           {
             this.state.genres.map(({id, name})=> 
