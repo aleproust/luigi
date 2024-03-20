@@ -14,7 +14,7 @@ There is 3 projects in this repository:
 - ui/
   - Render the data
 
-## Pre-requisit:
+## Prerequisite:
 - docker-compose
 - node LTS version
 
@@ -34,3 +34,12 @@ There is 3 projects in this repository:
 - 1. Back end task 4, GET http://localhost:3003/movies?sortBy=&orderBy=
 - 1. Back end task 5, POST http://localhost:3003/users
 
+## Could be improved
+- Error handling
+- Get all movies from tbdb
+- Configuration file 
+- Secret management
+- Logs
+- Unit tests
+- DB management and schema evolution control (Flyway like)
+- Style
