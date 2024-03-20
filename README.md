@@ -21,7 +21,7 @@ There is 3 projects in this repository:
 
 ## Run the project:
 1. docker-compose up -d
-2. Add you bearer token from tmdb api to make sure calls to api are authorized
+2. Add you bearer token from tmdb api to make sure calls to api are authorized in /grabber/src/tmdb/tmdb.service.ts
 3. cd api/ && npm install && npm start
 4. cd grabber/ && npm install && npm start
 4. cd ui/ && npm install && npm start
