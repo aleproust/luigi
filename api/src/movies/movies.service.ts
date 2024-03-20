@@ -24,6 +24,9 @@ export class MoviesService {
   // 1. Back end task 6
   findByReleaseDate(): Promise<ReadonlyArray<Movie>> {
     return this.moviesRepository.find({
+      relations:{
+        genres: true
+      },
       where:{
         releaseDate: Between(new Date('2024-02-01'), new Date('2024-02-29'))
       },

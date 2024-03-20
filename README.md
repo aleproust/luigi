@@ -21,15 +21,16 @@ There is 3 projects in this repository:
 
 ## Run the project:
 1. docker-compose up -d
-2. cd api/ && npm install && npm start
-3. cd grabber/ && npm install && npm start
-4. At this step you should have data into you database. There is a ui to access it at http://localhost:8080
-5. A swagger is also available at http://localhost:3000/api
+2. Add you bearer token from tmdb api to make sure calls to api are authorized
+3. cd api/ && npm install && npm start
+4. cd grabber/ && npm install && npm start
+5. At this step you should have data into you database. There is a ui to access it at http://localhost:8080
+6. A swagger is also available at http://localhost:3003/api
 
 
 ## Current API Requests
-- 1. Back end task 3, GET http://localhost:3000/movies?genreId=
-- 1. Back end task 4, GET http://localhost:3000/movies?sortBy=&orderBy=
-- 1. Back end task 5, POST http://localhost:3000/users
+- 1. Back end task 3, GET http://localhost:3003/movies?genreId=
+- 1. Back end task 4, GET http://localhost:3003/movies?sortBy=&orderBy=
+- 1. Back end task 5, POST http://localhost:3003/users
 - 
 - 

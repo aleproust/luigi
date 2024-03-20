@@ -10,8 +10,8 @@ export class MoviesController {
   getMovies(
     @Query('releaseMonth') releaseMonth: boolean = false, 
     @Query('genreId') genreId, 
-    @Query('sortBy') sortBy, 
-    @Query('order')order,
+    @Query('sortBy') sortBy = 'releaseDate', 
+    @Query('order')order = 'ASC',
     @Query('bookmarked') isBookmarked: boolean = false): Promise<ReadonlyArray<Movie>> {
     if(genreId){
       return this.moviesService.findByGenre(genreId, sortBy, order);
