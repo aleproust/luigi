@@ -22,7 +22,7 @@ export default class App extends Component {
   render(){
     return (
       <div className="App">
-        <button onClick={this.onFilterReleaseDateClick} > Filter Release date</button>
+        <button onClick={this.onFilterReleaseDateClick} > Display last month release</button>
         <select onChange={ e=> this.onGenreSelected(e.target.value)}>
           <option></option>
           {
@@ -36,7 +36,7 @@ export default class App extends Component {
   } 
 
   onFilterReleaseDateClick =  async () =>{
-    const movies = await fetchMoviesByGenre(14, '')
+    const movies = await fetchMoviesFromLastMonth()
     this.setState({movies})
   }
 

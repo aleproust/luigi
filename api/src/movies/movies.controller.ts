@@ -21,8 +21,6 @@ export class MoviesController {
     else if(isBookmarked){
       return this.moviesService.findBookmarked()
     }
-    
-
     else{
       return this.moviesService.findAll(sortBy, order)
       
